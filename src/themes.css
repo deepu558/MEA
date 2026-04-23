@@ -1,0 +1,564 @@
+/* Visual ideas: same MEA copy, different art direction. Selected via [data-theme] on .site */
+
+/* ----- 1. Heritage Teal (original) ----- */
+.site[data-theme='heritage'] {
+  --ink: #0c1f1e;
+  --ink-muted: #3d534f;
+  --cream: #f6f3eb;
+  --cream-dark: #ebe5d8;
+  --teal: #0f3d3e;
+  --teal-light: #1a5c5e;
+  --gold: #c4a035;
+  --gold-soft: rgba(196, 160, 53, 0.18);
+  --white: #fff;
+  --shadow: 0 18px 48px rgba(12, 31, 30, 0.12);
+  --radius: 12px;
+  --page-bg: #f6f3eb;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --link: #1a5c5e;
+  --link-hover: #0f3d3e;
+  --header-bg: color-mix(in srgb, var(--cream) 92%, transparent);
+  --header-border: #ebe5d8;
+  --header-blur: blur(10px);
+  --section-alt: color-mix(in srgb, #ebe5d8 55%, #fff);
+  --footer-bg: #f6f3eb;
+  --footer-border: #ebe5d8;
+  --nav-link: #3d534f;
+  --nav-hover: #0f3d3e;
+  --eyebrow: #1a5c5e;
+  --em: #1a5c5e;
+  --btn-header-bg: #0f3d3e;
+  --btn-header-fg: #f6f3eb;
+  --btn-header-hover-bg: #1a5c5e;
+  --btn-primary-fg: #f6f3eb;
+  --btn-ghost-fg: #0f3d3e;
+  --btn-ghost-hover-fg: #0c1f1e;
+  --btn-ghost-hover-bg: rgba(196, 160, 53, 0.18);
+  --btn-ghost-hover-border: #c4a035;
+  --btn-ghost-border: color-mix(in srgb, #0f3d3e 35%, transparent);
+  --logo-mark-bg: #0f3d3e;
+  --logo-mark-fg: #f6f3eb;
+  --hero-bg: #0f3d3e;
+  --hero-fg: #f6f3eb;
+  --hero-accent-bg: rgba(196, 160, 53, 0.18);
+  --hero-accent-border: color-mix(in srgb, #c4a035 55%, transparent);
+  --stat-bg: #fff;
+  --stat-border: 1px solid #ebe5d8;
+  --schedule-time: #0f3d3e;
+  --schedule-accent: #c4a035;
+  --theme-bar-bg: #ebe5d8;
+  --theme-bar-border: #d9d0c0;
+  --theme-bar-label: #3d534f;
+  --theme-pill-radius: 999px;
+  --theme-pill-border: #b8a88c;
+  --theme-pill-bg: #f6f3eb;
+  --theme-pill-fg: #0c1f1e;
+  --theme-pill-hover-bg: #fff;
+  --theme-pill-hover-fg: #0f3d3e;
+  --theme-pill-hover-border: #0f3d3e;
+  --theme-pill-active-bg: #0f3d3e;
+  --theme-pill-active-fg: #f6f3eb;
+  --theme-pill-active-border: #0f3d3e;
+  --contact-link-hover: #0f3d3e;
+}
+
+/* ----- 2. Neo-Brutal (sticker / poster) ----- */
+.site[data-theme='brutal'] {
+  --ink: #0a0a0a;
+  --ink-muted: #2a2a2a;
+  --cream: #fffef0;
+  --cream-dark: #0a0a0a;
+  --teal: #0a0a0a;
+  --teal-light: #1a1a1a;
+  --gold: #ffeb3b;
+  --gold-soft: #ffeb3b;
+  --white: #fffef0;
+  --shadow: 8px 8px 0 #0a0a0a;
+  --radius: 0;
+  --btn-radius: 0;
+  --btn-border: 3px solid #0a0a0a;
+  --logo-radius: 0;
+  --page-bg: #fffef0;
+  --font-display: 'Archivo Black', Impact, sans-serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+  --link: #0a0a0a;
+  --link-hover: #c41e3a;
+  --header-bg: #ffeb3b;
+  --header-border: 3px solid #0a0a0a;
+  --header-blur: none;
+  --section-alt: #e8e4d4;
+  --footer-bg: #ffeb3b;
+  --footer-border: 3px solid #0a0a0a;
+  --nav-link: #0a0a0a;
+  --nav-hover: #c41e3a;
+  --eyebrow: #0a0a0a;
+  --em: #c41e3a;
+  --btn-header-bg: #0a0a0a;
+  --btn-header-fg: #ffeb3b;
+  --btn-header-border: 3px solid #0a0a0a;
+  --btn-header-hover-bg: #1a1a1a;
+  --btn-header-hover-border: 3px solid #0a0a0a;
+  --btn-primary-fg: #0a0a0a;
+  --btn-primary-bg: #ffeb3b;
+  --btn-primary-border: 3px solid #0a0a0a;
+  --btn-primary-shadow: 6px 6px 0 #0a0a0a;
+  --btn-primary-hover-bg: #fff48a;
+  --btn-ghost-fg: #0a0a0a;
+  --btn-ghost-bg: #fff;
+  --btn-ghost-border: 3px solid #0a0a0a;
+  --btn-ghost-hover-bg: #e8e4d4;
+  --btn-ghost-hover-fg: #0a0a0a;
+  --btn-ghost-hover-border: 3px solid #0a0a0a;
+  --logo-mark-bg: #0a0a0a;
+  --logo-mark-fg: #ffeb3b;
+  --logo-mark-border: 3px solid #0a0a0a;
+  --logo-mark-shadow: 4px 4px 0 #1a1a1a;
+  --hero-bg: #0a0a0a;
+  --hero-fg: #ffeb3b;
+  --hero-shadow: 10px 10px 0 #c41e3a;
+  --hero-card-border: 3px solid #0a0a0a;
+  --hero-card-radius: 0;
+  --hero-accent-bg: #c41e3a;
+  --hero-accent-border: 3px solid #0a0a0a;
+  --title-em-style: normal;
+  --stat-bg: #fff;
+  --stat-border: 3px solid #0a0a0a;
+  --stat-shadow: 5px 5px 0 #0a0a0a;
+  --card-bg: #fff;
+  --card-border: 3px solid #0a0a0a;
+  --card-shadow: 6px 6px 0 #0a0a0a;
+  --pillar-shadow: 5px 5px 0 #0a0a0a;
+  --schedule-border: 3px solid #0a0a0a;
+  --schedule-shadow: 5px 5px 0 #0a0a0a;
+  --schedule-accent: #0a0a0a;
+  --schedule-time: #c41e3a;
+  --schedule-accent-width: 0;
+  --theme-bar-bg: #0a0a0a;
+  --theme-bar-border: 3px solid #0a0a0a;
+  --theme-bar-label: #ffeb3b;
+  --theme-pill-radius: 0;
+  --theme-pill-border: 2px solid #ffeb3b;
+  --theme-pill-bg: #1a1a1a;
+  --theme-pill-fg: #ffeb3b;
+  --theme-pill-hover-bg: #2a2a2a;
+  --theme-pill-hover-fg: #fff;
+  --theme-pill-hover-border: #ffeb3b;
+  --theme-pill-active-bg: #ffeb3b;
+  --theme-pill-active-fg: #0a0a0a;
+  --theme-pill-active-border: #0a0a0a;
+  --contact-link-hover: #c41e3a;
+  --title-tracking: 0.02em;
+  --title-case: uppercase;
+  --section-title-case: uppercase;
+  --section-title-tracking: 0.04em;
+  --section-title-pad: 0.2rem;
+  --section-title-rule: 4px solid #0a0a0a;
+}
+
+/* ----- 3. Nocturne Glass (night / neon) ----- */
+.site[data-theme='nocturne'] {
+  --ink: #e8f4fc;
+  --ink-muted: #94a8b8;
+  --cream: #0a1628;
+  --cream-dark: #1e3a4f;
+  --teal: #22d3ee;
+  --teal-light: #7dd3fc;
+  --gold: #a78bfa;
+  --gold-soft: rgba(34, 211, 238, 0.12);
+  --white: #111f2e;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  --radius: 20px;
+  --page-bg: linear-gradient(165deg, #040814 0%, #0a1a2e 45%, #0f2137 100%);
+  --font-display: 'Sora', system-ui, sans-serif;
+  --font-body: 'Outfit', system-ui, sans-serif;
+  --link: #7dd3fc;
+  --link-hover: #22d3ee;
+  --header-bg: color-mix(in srgb, #0a1628 75%, transparent);
+  --header-border: color-mix(in srgb, #22d3ee 25%, transparent);
+  --header-blur: blur(16px);
+  --section-alt: color-mix(in srgb, #0f2137 88%, #22d3ee 6%);
+  --footer-bg: #060d18;
+  --footer-border: color-mix(in srgb, #7dd3fc 20%, transparent);
+  --nav-link: #94a8b8;
+  --nav-hover: #e8f4fc;
+  --eyebrow: #22d3ee;
+  --em: #a78bfa;
+  --btn-header-bg: linear-gradient(135deg, #22d3ee, #a78bfa);
+  --btn-header-fg: #040814;
+  --btn-header-border: 1px solid color-mix(in srgb, #22d3ee 50%, transparent);
+  --btn-header-hover-bg: linear-gradient(135deg, #7dd3fc, #c4b5fd);
+  --btn-header-hover-border: 1px solid #7dd3fc;
+  --btn-primary-bg: linear-gradient(135deg, #22d3ee, #3b82f6);
+  --btn-primary-fg: #040814;
+  --btn-primary-border: 1px solid rgba(34, 211, 238, 0.4);
+  --btn-primary-shadow: 0 12px 32px rgba(34, 211, 238, 0.25);
+  --btn-primary-hover-bg: linear-gradient(135deg, #7dd3fc, #60a5fa);
+  --btn-ghost-fg: #e8f4fc;
+  --btn-ghost-border: 1px solid color-mix(in srgb, #7dd3fc 35%, transparent);
+  --btn-ghost-hover-bg: rgba(34, 211, 238, 0.1);
+  --btn-ghost-hover-fg: #e8f4fc;
+  --btn-ghost-hover-border: #22d3ee;
+  --logo-mark-bg: color-mix(in srgb, #111f2e 60%, #22d3ee 20%);
+  --logo-mark-fg: #22d3ee;
+  --logo-mark-border: 1px solid color-mix(in srgb, #22d3ee 45%, transparent);
+  --logo-mark-shadow: 0 0 24px rgba(34, 211, 238, 0.2);
+  --hero-bg: color-mix(in srgb, #111f2e 50%, #0a1628 50%);
+  --hero-fg: #e8f4fc;
+  --hero-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+  --hero-card-border: 1px solid color-mix(in srgb, #7dd3fc 28%, transparent);
+  --hero-accent-bg: rgba(167, 139, 250, 0.2);
+  --hero-accent-border: 1px solid color-mix(in srgb, #a78bfa 45%, transparent);
+  --stat-bg: color-mix(in srgb, #111f2e 85%, #22d3ee 3%);
+  --stat-border: 1px solid color-mix(in srgb, #7dd3fc 20%, transparent);
+  --stat-shadow: none;
+  --card-bg: color-mix(in srgb, #111f2e 92%, transparent);
+  --card-border: 1px solid color-mix(in srgb, #7dd3fc 18%, transparent);
+  --card-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  --pillar-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  --schedule-border: 1px solid color-mix(in srgb, #7dd3fc 18%, transparent);
+  --schedule-time: #7dd3fc;
+  --schedule-accent: #a78bfa;
+  --theme-bar-bg: color-mix(in srgb, #040814 92%, #22d3ee 4%);
+  --theme-bar-border: color-mix(in srgb, #22d3ee 22%, transparent);
+  --theme-bar-label: #7dd3fc;
+  --theme-pill-radius: 999px;
+  --theme-pill-border: 1px solid color-mix(in srgb, #7dd3fc 30%, transparent);
+  --theme-pill-bg: #0f2137;
+  --theme-pill-fg: #c8d8e4;
+  --theme-pill-hover-bg: rgba(34, 211, 238, 0.12);
+  --theme-pill-hover-fg: #e8f4fc;
+  --theme-pill-hover-border: #22d3ee;
+  --theme-pill-active-bg: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+  --theme-pill-active-fg: #040814;
+  --theme-pill-active-border: #22d3ee;
+  --contact-link-hover: #22d3ee;
+}
+
+.site[data-theme='nocturne'] .btn--header,
+.site[data-theme='nocturne'] .btn--primary {
+  -webkit-text-fill-color: #040814;
+  color: #040814;
+}
+
+/* ----- 4. Editorial (magazine) ----- */
+.site[data-theme='editorial'] {
+  --ink: #1a1a1a;
+  --ink-muted: #4a4a4a;
+  --cream: #f7f1e8;
+  --cream-dark: #1a1a1a;
+  --teal: #1a1a1a;
+  --teal-light: #6b2d3a;
+  --gold: #6b2d3a;
+  --gold-soft: rgba(107, 45, 58, 0.08);
+  --white: #fffcf6;
+  --shadow: 0 1px 0 #1a1a1a;
+  --radius: 0;
+  --page-bg: #f7f1e8;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Newsreader', Georgia, serif;
+  --link: #6b2d3a;
+  --link-hover: #1a1a1a;
+  --header-bg: #fffcf6;
+  --header-border: 0;
+  --header-blur: none;
+  --section-alt: #ede6da;
+  --footer-bg: #1a1a1a;
+  --footer-border: 0;
+  --footer-fg: #e8e0d5;
+  --nav-link: #4a4a4a;
+  --nav-hover: #6b2d3a;
+  --eyebrow: #6b2d3a;
+  --em: #6b2d3a;
+  --btn-radius: 0;
+  --btn-header-bg: #1a1a1a;
+  --btn-header-fg: #f7f1e8;
+  --btn-header-border: 0;
+  --btn-header-hover-bg: #6b2d3a;
+  --btn-ghost-fg: #1a1a1a;
+  --btn-ghost-border: 0;
+  --btn-ghost-bg: transparent;
+  --btn-ghost-hover-border: 0;
+  --btn-ghost-hover-fg: #6b2d3a;
+  --btn-ghost-hover-bg: transparent;
+  --btn-primary-fg: #f7f1e8;
+  --btn-primary-bg: #1a1a1a;
+  --btn-primary-border: 0;
+  --btn-primary-shadow: none;
+  --btn-primary-hover-bg: #6b2d3a;
+  --logo-radius: 0;
+  --logo-mark-bg: #1a1a1a;
+  --logo-mark-fg: #f7f1e8;
+  --hero-bg: #1a1a1a;
+  --hero-fg: #f7f1e8;
+  --hero-shadow: none;
+  --hero-card-border: 0;
+  --hero-accent-bg: #6b2d3a;
+  --hero-accent-border: 0;
+  --stat-bg: #fffcf6;
+  --stat-border: 0;
+  --stat-shadow: 0 2px 0 #1a1a1a;
+  --card-bg: #fffcf6;
+  --card-border: 0;
+  --card-shadow: 0 3px 0 #1a1a1a;
+  --pillar-shadow: 0 2px 0 #1a1a1a;
+  --schedule-border: 0;
+  --schedule-time: #6b2d3a;
+  --schedule-accent: #6b2d3a;
+  --hero-align: left;
+  --title-em-style: normal;
+  --section-title-rule: 2px solid #1a1a1a;
+  --section-title-pad: 0.4rem;
+  --section-title-case: none;
+  --footer__links: #e8e0d5;
+  --theme-bar-bg: #1a1a1a;
+  --theme-bar-border: 0;
+  --theme-bar-label: #b8a99a;
+  --theme-pill-radius: 0;
+  --theme-pill-border: 1px solid #4a4a4a;
+  --theme-pill-bg: #0f0f0f;
+  --theme-pill-fg: #e8e0d5;
+  --theme-pill-hover-bg: #2a2a2a;
+  --theme-pill-hover-fg: #f7f1e8;
+  --theme-pill-hover-border: #6b2d3a;
+  --theme-pill-active-bg: #6b2d3a;
+  --theme-pill-active-fg: #f7f1e8;
+  --theme-pill-active-border: #6b2d3a;
+  --contact-link-hover: #6b2d3a;
+}
+
+.site[data-theme='editorial'] .footer__links a {
+  color: #e8e0d5;
+}
+.site[data-theme='editorial'] .footer__links a:hover {
+  color: #fff;
+}
+.site[data-theme='editorial'] .hero__title {
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+/* ----- 5. Monsoon Clay (warm, organic) ----- */
+.site[data-theme='monsoon'] {
+  --ink: #1e2a25;
+  --ink-muted: #4d5c55;
+  --cream: #f4e6dc;
+  --cream-dark: #e0cfc0;
+  --teal: #1e3a2f;
+  --teal-light: #2d5a47;
+  --gold: #c45c3e;
+  --gold-soft: rgba(196, 92, 62, 0.15);
+  --white: #fffbfa;
+  --shadow: 0 20px 50px rgba(30, 42, 37, 0.12);
+  --radius: 18px;
+  --page-bg: #efe2d7;
+  --font-display: 'Libre Baskerville', Georgia, serif;
+  --font-body: 'Nunito Sans', system-ui, sans-serif;
+  --link: #2d5a47;
+  --link-hover: #c45c3e;
+  --header-bg: color-mix(in srgb, #fffbfa 90%, #f4e6dc 10%);
+  --header-border: #e0cfc0;
+  --header-blur: blur(12px);
+  --section-alt: #e8d9cc;
+  --footer-bg: #1e3a2f;
+  --footer-border: #1e3a2f;
+  --footer-fg: #e8d9cc;
+  --nav-link: #4d5c55;
+  --nav-hover: #c45c3e;
+  --eyebrow: #c45c3e;
+  --em: #2d5a47;
+  --btn-header-bg: #c45c3e;
+  --btn-header-fg: #fffbfa;
+  --btn-header-hover-bg: #a84a30;
+  --btn-ghost-fg: #1e3a2f;
+  --btn-ghost-border: 2px solid color-mix(in srgb, #1e3a2f 20%, transparent);
+  --btn-ghost-hover-bg: #fff;
+  --btn-ghost-hover-border: #c45c3e;
+  --btn-ghost-hover-fg: #1e2a25;
+  --btn-primary-fg: #fffbfa;
+  --btn-primary-bg: #1e3a2f;
+  --btn-primary-border: 2px solid #1e3a2f;
+  --btn-primary-shadow: 0 4px 20px rgba(30, 58, 47, 0.25);
+  --btn-primary-hover-bg: #2d5a47;
+  --logo-mark-bg: #1e3a2f;
+  --logo-mark-fg: #f4e6dc;
+  --hero-bg: #1e3a2f;
+  --hero-fg: #f4e6dc;
+  --hero-shadow: 0 16px 40px rgba(30, 58, 47, 0.2);
+  --hero-accent-bg: rgba(196, 92, 62, 0.25);
+  --hero-accent-border: 0;
+  --stat-bg: #fffbfa;
+  --stat-border: 1px solid #e0cfc0;
+  --schedule-time: #1e3a2f;
+  --schedule-accent: #c45c3e;
+  --theme-bar-bg: #1e3a2f;
+  --theme-bar-border: #1e3a2f;
+  --theme-bar-label: #b8a99a;
+  --theme-pill-radius: 999px;
+  --theme-pill-border: 1px solid #4a6b5a;
+  --theme-pill-bg: #243a32;
+  --theme-pill-fg: #e8d9cc;
+  --theme-pill-hover-bg: #2d5a47;
+  --theme-pill-hover-fg: #fffbfa;
+  --theme-pill-hover-border: #c45c3e;
+  --theme-pill-active-bg: #c45c3e;
+  --theme-pill-active-fg: #fffbfa;
+  --theme-pill-active-border: #c45c3e;
+  --contact-link-hover: #c45c3e;
+}
+.site[data-theme='monsoon'] .footer__links a {
+  color: #e8d9cc;
+}
+.site[data-theme='monsoon'] .footer__links a:hover {
+  color: #c45c3e;
+}
+.site[data-theme='monsoon'] .logo__name,
+.site[data-theme='monsoon'] .hero__title,
+.site[data-theme='monsoon'] .section__title,
+.site[data-theme='monsoon'] .pillars h3,
+.site[data-theme='monsoon'] .card h3 {
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* ----- 6. Bauhaus Grid (primary colors) ----- */
+.site[data-theme='bauhaus'] {
+  --ink: #0b0b0b;
+  --ink-muted: #3d3d3d;
+  --cream: #faf7f0;
+  --cream-dark: #0b0b0b;
+  --teal: #0b0b0b;
+  --teal-light: #1d4ed8;
+  --gold: #e11d48;
+  --gold-soft: #facc15;
+  --white: #fff;
+  --shadow: none;
+  --radius: 0;
+  --btn-radius: 0;
+  --page-bg: #faf7f0;
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --link: #1d4ed8;
+  --link-hover: #e11d48;
+  --header-bg: #fff;
+  --header-border: 4px solid #0b0b0b;
+  --header-blur: none;
+  --section-alt: #e8e3f0;
+  --footer-bg: #0b0b0b;
+  --footer-border: 0;
+  --footer-fg: #faf7f0;
+  --nav-link: #3d3d3d;
+  --nav-hover: #e11d48;
+  --eyebrow: #1d4ed8;
+  --em: #e11d48;
+  --btn-header-bg: #1d4ed8;
+  --btn-header-fg: #fff;
+  --btn-header-border: 3px solid #0b0b0b;
+  --btn-header-hover-bg: #e11d48;
+  --btn-header-hover-border: 3px solid #0b0b0b;
+  --btn-primary-bg: #facc15;
+  --btn-primary-fg: #0b0b0b;
+  --btn-primary-border: 3px solid #0b0b0b;
+  --btn-primary-hover-bg: #e11d48;
+  --btn-primary-hover-fg: #fff;
+  --btn-ghost-fg: #0b0b0b;
+  --btn-ghost-border: 3px solid #0b0b0b;
+  --btn-ghost-bg: #fff;
+  --btn-ghost-hover-bg: #e8e3f0;
+  --btn-ghost-hover-fg: #0b0b0b;
+  --btn-ghost-hover-border: 3px solid #0b0b0b;
+  --logo-radius: 0;
+  --logo-mark-bg: #e11d48;
+  --logo-mark-fg: #fff;
+  --logo-mark-border: 3px solid #0b0b0b;
+  --hero-bg: #1d4ed8;
+  --hero-fg: #fff;
+  --hero-shadow: none;
+  --hero-card-border: 3px solid #0b0b0b;
+  --hero-card-radius: 0;
+  --hero-accent-bg: #facc15;
+  --hero-accent-border: 3px solid #0b0b0a;
+  --title-em-style: normal;
+  --stat-bg: #fff;
+  --stat-border: 3px solid #0b0b0b;
+  --card-bg: #fff;
+  --card-border: 3px solid #0b0b0b;
+  --card-shadow: none;
+  --pillar-shadow: none;
+  --schedule-border: 3px solid #0b0b0b;
+  --schedule-time: #1d4ed8;
+  --schedule-accent: #e11d48;
+  --section-title-track: 0.02em;
+  --logo-mark-shadow: 4px 4px 0 #0b0b0b;
+  --stat-shadow: 4px 4px 0 #0b0b0b;
+  --card-shadow: 4px 4px 0 #0b0b0b;
+  --theme-bar-bg: #facc15;
+  --theme-bar-border: 3px solid #0b0b0b;
+  --theme-bar-label: #0b0b0b;
+  --theme-pill-radius: 0;
+  --theme-pill-border: 2px solid #0b0b0b;
+  --theme-pill-bg: #fff;
+  --theme-pill-fg: #0b0b0b;
+  --theme-pill-hover-bg: #e8e3f0;
+  --theme-pill-hover-fg: #0b0b0b;
+  --theme-pill-hover-border: #0b0b0b;
+  --theme-pill-active-bg: #0b0b0b;
+  --theme-pill-active-fg: #faf7f0;
+  --theme-pill-active-border: #0b0b0b;
+  --contact-link-hover: #e11d48;
+  --title-tracking: 0.02em;
+  --section-title-case: none;
+  --section-title-pad: 0;
+  --section-title-rule: 6px solid #0b0b0b;
+  --section-title-pad: 0.3rem;
+  --max: 1000px;
+}
+
+.site[data-theme='bauhaus'] .hero {
+  position: relative;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 7px,
+    color-mix(in srgb, #0b0b0b 5%, transparent) 7px,
+    color-mix(in srgb, #0b0b0b 5%, transparent) 8px
+  );
+  border-bottom: 4px solid #0b0b0b;
+}
+.site[data-theme='bauhaus'] .section--alt {
+  background: #e8e3f0
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230b0b0b15' stroke-width='0.5'%3E%3Ccircle cx='2' cy='2' r='1' fill='%230b0b0b12'/%3E%3C/svg%3E");
+}
+.site[data-theme='bauhaus'] .logo__name,
+.site[data-theme='bauhaus'] .section__title,
+.site[data-theme='bauhaus'] .hero__title {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+.site[data-theme='bauhaus'] .footer__links a {
+  color: #faf7f0;
+}
+.site[data-theme='bauhaus'] .footer__links a:hover {
+  color: #facc15;
+}
+
+/* Gradient page bg for nocturne: apply to .site */
+.site[data-theme='nocturne'] {
+  background-attachment: fixed;
+}
+
+/* Edge: nocturne theme-bar active pill gradient as background */
+.site[data-theme='nocturne'] .theme-pill.is-active {
+  background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+  -webkit-text-fill-color: #040814;
+  color: #040814;
+  border-color: #22d3ee;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.25);
+}
+
+/* Header buttons with gradient: ensure readable text in nocturne */
+.site[data-theme='nocturne'] .btn--header {
+  -webkit-text-fill-color: #040814;
+  color: #040814;
+}
