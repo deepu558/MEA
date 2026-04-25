@@ -1,10 +1,7 @@
 import { ADMISSION } from '../data/siteContent.jsx'
 import { AdmissionForm } from './AdmissionForm.jsx'
 
-/**
- * Default “classic” section shell; for immersive layouts, pass class names or
- * render ADMISSION + AdmissionForm inline.
- */
+/** Default admission block; override `sectionClassName` / `titleId` if needed. */
 export function AdmissionSection({
   sectionClassName = 'section section--alt',
   titleId = 'admission-title',

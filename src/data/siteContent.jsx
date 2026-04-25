@@ -1,35 +1,35 @@
-/** Map centre (Panjagutta) — used for embed preview; tweak if the pin is off. */
-const MAP_CENTER = { lat: 17.4163, lng: 78.456 }
+/** Ashok Nagar centre — coordinates match the Google Maps pin you use. */
+const MAP_CENTER = { lat: 17.404388, lng: 78.489365 }
 
 export const SITE = {
   name: 'Murthy Education Academy',
   short: 'MEA',
   mapCenter: MAP_CENTER,
   tagline: 'Focused tuition in Maths, Physics & Biology for secondary school.',
-  city: 'Hyderabad, Telangana, India',
+  city: 'Hyderabad — Ashok Nagar (500 020), Telangana, India',
   address: [
-    '2nd Floor, Srinidhi Plaza, Plot 18',
-    'Road No. 5, Nagarjuna Hills, Panjagutta',
-    'Hyderabad — 500082, Telangana, India',
+    "People's High School premises, Opp. Syndicate Bank",
+    'Ashok Nagar, Hyderabad',
+    '500 020, Telangana, India',
   ],
-  phoneDisplay: '+91 98482 91763',
-  phoneTel: '+919848291763',
+  /** Tap-to-call lines (business card). Header uses the first. */
+  phoneLines: [
+    { display: '+91 94418 96898', tel: '+919441896898' },
+    { display: '+91 94404 42666', tel: '+919440442666' },
+  ],
+  phoneDisplay: '+91 94418 96898',
+  phoneTel: '+919441896898',
   email: 'admissions@murthyeducationacademy.in',
-  instagram: 'https://www.instagram.com/murthy_education_academy/',
+  instagram: 'https://www.instagram.com/murthy_voora_87/',
   /** Opening post / reel to highlight in the “Reel” layout (full URL). */
-  featuredReel:
-    'https://www.instagram.com/reel/DWfOmGiDCS6/?igsh=MTJnZXYxd3lpNHJzOQ==',
-  whatsapp: 'https://wa.me/919848291763',
+  featuredReel: 'https://www.instagram.com/murthy_voora_87/',
+  whatsapp: 'https://wa.me/919441896898',
   /**
-   * Opens Google Maps at this place (map + pin), not turn-by-turn directions.
+   * Opens Google Maps at this pin (same as your shared link).
    */
-  googleMapsUrl:
-    'https://www.google.com/maps/search/?api=1&query=' +
-    encodeURIComponent(
-      '2nd Floor, Srinidhi Plaza, Plot 18, Road No. 5, Nagarjuna Hills, Panjagutta, Hyderabad, Telangana 500082, India',
-    ),
+  googleMapsUrl: 'https://maps.google.com/?q=17.404388,78.489365',
   /**
-   * Same location as `mapCenter` — used only for the small embedded preview.
+   * Same location as `mapCenter` — embedded map preview on the site.
    */
   googleMapsEmbedUrl: `https://www.google.com/maps?hl=en&q=${encodeURIComponent(
     `${MAP_CENTER.lat},${MAP_CENTER.lng}`,
@@ -45,62 +45,35 @@ export const NAV = [
   { href: '#contact', label: 'Contact' },
 ]
 
-/** Placeholder portraits (replace with your team). Colours: pastel fills + offset-shadow tint. */
+/** Pop-out cards use placeholder photos — swap `image` URLs for your own files when ready. */
 export const TEACHING_STAFF = {
   title: 'Meet the faculty',
   intro:
-    'Experienced teachers who keep concepts clear, pace steady, and doubt-solving approachable.',
+    'Murthy Education Academy has coached Mathematics & Sciences from Class VI to X since 1988. Our lead faculty combine board-focused teaching with patient doubt-solving.',
   members: [
     {
-      name: 'Dr. Ananya Iyer',
-      subjects: 'Mathematics · Classes 9 & 10',
-      yearsExp: '14 years teaching',
+      name: 'V.S.R. Chandra Murthy',
+      subjects: 'M.Sc., M.Ed., PGDCA · Mathematics & Sciences (VI–X)',
+      yearsExp: 'Founder & lead faculty · with MEA since 1988',
       image:
-        'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=500&q=80',
+        'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&h=500&q=80',
       color: '#fef3d9',
       shadow: 'color-mix(in srgb, #f4c430 45%, #c9a227)',
     },
     {
-      name: 'R. Karthik Reddy',
-      subjects: 'Physics · Classes 9 & 10',
-      yearsExp: '11 years teaching',
+      name: 'V. Anuradha',
+      subjects: 'B.Sc. · Sciences & student support (VI–X)',
+      yearsExp: 'Faculty & co-ordination',
       image:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&h=500&q=80',
+        'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=500&q=80',
       color: '#ffe8e0',
       shadow: 'color-mix(in srgb, #e8a090 50%, #c45c48)',
-    },
-    {
-      name: 'Sunita Menon',
-      subjects: 'Mathematics · problem-solving focus',
-      yearsExp: '9 years teaching',
-      image:
-        'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=500&q=80',
-      color: '#d9f5ec',
-      shadow: 'color-mix(in srgb, #5dbe9d 50%, #2d8a6a)',
-    },
-    {
-      name: 'Vikram Prasad',
-      subjects: 'Physics · numericals & practicals',
-      yearsExp: '12 years teaching',
-      image:
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&h=500&q=80',
-      color: '#e3eefc',
-      shadow: 'color-mix(in srgb, #6b9bd1 50%, #3d6fa8)',
-    },
-    {
-      name: 'Dr. Meera Krishnan',
-      subjects: 'Biology · Classes 9 & 10',
-      yearsExp: '10 years teaching',
-      image:
-        'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&h=500&q=80',
-      color: '#ecfdf3',
-      shadow: 'color-mix(in srgb, #22c55e 40%, #15803d)',
     },
   ],
 }
 
 export const HERO_COPY = {
-  eyebrow: 'Tuition centre · Classes 9 & 10',
+  eyebrow: 'Est. 1988 · Tuition · Classes 9 & 10',
   lede: SITE.tagline,
   card: {
     label: 'This term',
@@ -113,13 +86,26 @@ export const HERO_COPY = {
 export const STATS = [
   { k: '2 hr', v: 'Focused sessions' },
   { k: 'AM & PM', v: 'Morning & evening' },
-  { k: 'Hyderabad', v: 'Panjagutta centre' },
 ]
+
+/** Placeholder metrics — replace with verified figures from your records when ready. */
+export const IMPACT = {
+  eyebrow: 'By the numbers',
+  title: 'Trust built over decades',
+  intro:
+    'A snapshot of our reach at a glance. These are illustrative for now; swap in your real student counts and milestones anytime.',
+  stats: [
+    { value: '1,180+', label: 'Students trained & guided', tone: 'gold' },
+    { value: '2.1k+', label: 'Class hours (last year, est.)', tone: 'teal' },
+    { value: '100%', label: 'Focus on every doubt', tone: 'ember' },
+    { value: '36+', label: 'Years since 1988', tone: 'sage' },
+  ],
+}
 
 export const ABOUT = {
   title: (short) => `Why families choose ${short}`,
   intro:
-    'We are a small-batch tuition centre in Hyderabad, built around patience, structure, and consistent practice. Our goal is not just marks — it is lasting understanding students can carry into senior classes.',
+    'We are a long-running Hyderabad tuition centre (established 1988), now focused on small batches, patience, and consistent practice for secondary grades. Our goal is not just marks — it is lasting understanding students can carry into senior classes.',
   pillars: [
     {
       title: 'Clear explanations',
@@ -199,90 +185,3 @@ export const ADMISSION = {
   emailSubject: 'Murthy Education Academy — Admission enquiry',
 }
 
-/** “Classic hero + search” layout — full-bleed class photos, slider copy, find form. */
-export const HERO_SEARCH = {
-  slides: [
-    {
-      image:
-        'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&h=900&q=80',
-      eyebrow: `Welcome to ${SITE.short}`,
-      title: 'Board-ready learning in a calm, steady classroom',
-      sub: 'Maths, Physics & Biology for Classes 9 & 10 — Hyderabad, Panjagutta',
-    },
-    {
-      image:
-        'https://images.unsplash.com/photo-1580582932707-520ead9374d7?auto=format&fit=crop&w=1920&h=900&q=80',
-      eyebrow: 'Small batches · clear explanations',
-      title: 'Room to ask questions, space to revise',
-      sub: 'Two-hour sessions, morning and evening, structured for exam confidence.',
-    },
-    {
-      image:
-        'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&h=900&q=80',
-      eyebrow: 'Parents & students',
-      title: 'Visit us for a short counselling and batch pick',
-      sub: "We're here to help you choose the right section — not a hard sell.",
-    },
-    {
-      image:
-        'https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1920&h=900&q=80',
-      eyebrow: 'Your pathway forward',
-      title: 'Build habits that outlast a single test',
-      sub: 'Concept clarity, practice, and support through Class 9 & 10.',
-    },
-  ],
-  promo:
-    'Free counselling & batch visit — we help you pick Maths, Physics, Biology, and timing. Panjagutta, Hyderabad.',
-  find: {
-    title: 'Find the right class',
-    sub:
-      'Choose your options — on submit we take you to contact so you can call, WhatsApp, or visit.',
-    cta: 'View contact & timings',
-  },
-  searchFields: [
-    {
-      id: 'field-grade',
-      label: 'Class',
-      name: 'grade',
-      options: [
-        { value: '', label: '— Select —' },
-        { value: '9', label: 'Class 9' },
-        { value: '10', label: 'Class 10' },
-      ],
-    },
-    {
-      id: 'field-syllabus',
-      label: 'Syllabus',
-      name: 'syllabus',
-      options: [
-        { value: '', label: '— Select —' },
-        { value: 'state', label: 'State / SSC-style' },
-        { value: 'cbse', label: 'CBSE-style' },
-      ],
-    },
-    {
-      id: 'field-subject',
-      label: 'Subject',
-      name: 'subject',
-      options: [
-        { value: '', label: '— Select —' },
-        { value: 'maths', label: 'Mathematics' },
-        { value: 'physics', label: 'Physics' },
-        { value: 'biology', label: 'Biology' },
-        { value: 'both', label: 'Maths + Physics' },
-        { value: 'all_three', label: 'Maths + Physics + Biology' },
-      ],
-    },
-    {
-      id: 'field-slot',
-      label: 'Batch timing',
-      name: 'slot',
-      options: [
-        { value: '', label: '— Select —' },
-        { value: 'morning', label: 'Morning (5:30 – 7:30)' },
-        { value: 'evening', label: 'Evening (5:30 – 7:30)' },
-        { value: 'unsure', label: 'Not sure yet' },
-      ],
-    },
-  ],
-}

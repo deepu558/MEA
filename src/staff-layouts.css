@@ -290,6 +290,20 @@
   .stf-mosaic__item:not(.stf-mosaic__item--main) .stf-card {
     max-width: 100%;
   }
+
+  /* Two faculty members: side-by-side instead of 3+ asymmetric mosaic */
+  .stf-mosaic__grid--pair {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: end;
+    justify-items: center;
+  }
+  .stf-mosaic__grid--pair .stf-mosaic__item--main {
+    grid-row: auto;
+  }
+  .stf-mosaic__grid--pair .stf-mosaic__item {
+    max-width: 24rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

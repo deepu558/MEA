@@ -1,7 +1,10 @@
 import { motion as Motion } from 'framer-motion'
 import { AddressWithMapLink } from '../components/AddressWithMapLink.jsx'
 import { AdmissionSection } from '../components/AdmissionSection.jsx'
+import { ContactPhoneList } from '../components/ContactPhoneList.jsx'
 import { ContactActions } from '../components/ContactActions.jsx'
+import { FacultyMosaicSection } from '../components/FacultyMosaicSection.jsx'
+import { ImpactStatsSection } from '../components/ImpactStatsSection.jsx'
 import { HeroTitle } from '../components/HeroTitle.jsx'
 import { Reveal } from '../components/Reveal.jsx'
 import { SiteFooter } from '../components/SiteFooter.jsx'
@@ -33,18 +36,20 @@ export function ClassicLayout() {
               <span className="logo__sub">{SITE.city}</span>
             </span>
           </a>
-          <nav className="nav" aria-label="Primary">
-            <ul className="nav__list">
-              {NAV.map((item) => (
-                <li key={item.href}>
-                  <a href={item.href}>{item.label}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <a className="btn btn--header" href={`tel:${SITE.phoneTel}`}>
-            Call us
-          </a>
+          <div className="header__actions">
+            <nav className="nav" aria-label="Primary">
+              <ul className="nav__list">
+                {NAV.map((item) => (
+                  <li key={item.href}>
+                    <a href={item.href}>{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <a className="btn btn--header" href={`tel:${SITE.phoneTel}`}>
+              Call us
+            </a>
+          </div>
         </div>
       </Motion.header>
 
@@ -56,7 +61,10 @@ export function ClassicLayout() {
               <HeroTitle id="hero-title" />
               <p className="hero__lede">{HERO_COPY.lede}</p>
               <div className="hero__actions">
-                <a className="btn btn--primary" href="#contact">
+                <a className="btn btn--primary" href="#admission">
+                  Admission form
+                </a>
+                <a className="btn btn--ghost" href="#contact">
                   Enquire / Visit
                 </a>
                 <a className="btn btn--ghost" href="#schedule">
@@ -84,7 +92,11 @@ export function ClassicLayout() {
         </section>
 
         <Reveal>
-        <section className="section" id="about" aria-labelledby="about-title">
+        <section
+          className="section section--tight-top"
+          id="about"
+          aria-labelledby="about-title"
+        >
           <div className="section__inner">
             <h2 id="about-title" className="section__title">
               {ABOUT.title(SITE.short)}
@@ -123,6 +135,12 @@ export function ClassicLayout() {
             </div>
           </div>
         </section>
+        </Reveal>
+
+        <ImpactStatsSection />
+
+        <Reveal delay={0.05}>
+          <FacultyMosaicSection />
         </Reveal>
 
         <Reveal delay={0.06}>
@@ -171,12 +189,7 @@ export function ClassicLayout() {
                 </li>
                 <li>
                   <span className="contact-list__label">Phone</span>
-                  <a
-                    className="contact-list__value"
-                    href={`tel:${SITE.phoneTel}`}
-                  >
-                    {SITE.phoneDisplay}
-                  </a>
+                  <ContactPhoneList />
                 </li>
                 <li>
                   <span className="contact-list__label">Email</span>

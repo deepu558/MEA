@@ -29,8 +29,9 @@
   --eyebrow: #1a5c5e;
   --em: #1a5c5e;
   --btn-header-bg: #0f3d3e;
-  --btn-header-fg: #f6f3eb;
+  --btn-header-fg: #ffffff;
   --btn-header-hover-bg: #1a5c5e;
+  --btn-header-hover-fg: #ffffff;
   --btn-primary-fg: #f6f3eb;
   --btn-ghost-fg: #0f3d3e;
   --btn-ghost-hover-fg: #0c1f1e;
@@ -47,19 +48,6 @@
   --stat-border: 1px solid #ebe5d8;
   --schedule-time: #0f3d3e;
   --schedule-accent: #c4a035;
-  --theme-bar-bg: #ebe5d8;
-  --theme-bar-border: #d9d0c0;
-  --theme-bar-label: #3d534f;
-  --theme-pill-radius: 999px;
-  --theme-pill-border: #b8a88c;
-  --theme-pill-bg: #f6f3eb;
-  --theme-pill-fg: #0c1f1e;
-  --theme-pill-hover-bg: #fff;
-  --theme-pill-hover-fg: #0f3d3e;
-  --theme-pill-hover-border: #0f3d3e;
-  --theme-pill-active-bg: #0f3d3e;
-  --theme-pill-active-fg: #f6f3eb;
-  --theme-pill-active-border: #0f3d3e;
   --contact-link-hover: #0f3d3e;
 }
 
@@ -546,15 +534,6 @@
 /* Gradient page bg for nocturne: apply to .site */
 .site[data-theme='nocturne'] {
   background-attachment: fixed;
-}
-
-/* Edge: nocturne theme-bar active pill gradient as background */
-.site[data-theme='nocturne'] .theme-pill.is-active {
-  background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
-  -webkit-text-fill-color: #040814;
-  color: #040814;
-  border-color: #22d3ee;
-  box-shadow: 0 0 20px rgba(34, 211, 238, 0.25);
 }
 
 /* Header buttons with gradient: ensure readable text in nocturne */
