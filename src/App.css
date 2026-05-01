@@ -709,6 +709,11 @@
   max-width: min(var(--max, 1120px), 100%);
 }
 
+.gallery__scroller {
+  width: 100%;
+  min-width: 0;
+}
+
 .gallery__grid {
   list-style: none;
   margin: 0.35rem 0 0;
@@ -717,6 +722,14 @@
   grid-template-columns: repeat(auto-fill, minmax(14.25rem, 1fr));
   gap: 1.05rem 1.15rem;
   width: 100%;
+}
+
+.gallery__hint {
+  display: none;
+  margin: 0.5rem 0 0;
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  text-align: center;
 }
 
 .gallery__cell {
@@ -760,10 +773,60 @@
   transform: scale(1.04);
 }
 
-@media (max-width: 520px) {
+/* Mobile / small tablet: two photos per “page”, horizontal swipe */
+@media (max-width: 767px) {
+  .gallery__hint {
+    display: block;
+  }
+
+  .gallery__scroller {
+    margin-inline: -1.25rem;
+    padding-inline: 1.25rem;
+    position: relative;
+  }
+
+  .gallery__scroller::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0.55rem;
+    width: 2rem;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--section-alt, var(--cream))
+    );
+    opacity: 0.92;
+  }
+
   .gallery__grid {
-    grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
-    gap: 0.85rem 0.9rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0;
+    gap: 0.65rem;
+    padding-bottom: 0.65rem;
+    margin-bottom: -0.15rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .gallery__cell {
+    flex: 0 0 calc((100% - 0.65rem) / 2);
+    max-width: calc((100% - 0.65rem) / 2);
+    scroll-snap-align: start;
+    min-width: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery__hint {
+    display: none !important;
   }
 }
 
@@ -777,6 +840,12 @@
   .gallery__cell:hover .gallery__img,
   .gallery__cell:focus-within .gallery__img {
     transform: none;
+  }
+
+  @media (max-width: 767px) {
+    .gallery__grid {
+      scroll-snap-type: none;
+    }
   }
 }
 
