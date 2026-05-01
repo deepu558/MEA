@@ -4,6 +4,7 @@ import { AdmissionSection } from '../components/AdmissionSection.jsx'
 import { ContactPhoneList } from '../components/ContactPhoneList.jsx'
 import { ContactActions } from '../components/ContactActions.jsx'
 import { FacultyMosaicSection } from '../components/FacultyMosaicSection.jsx'
+import { GallerySection } from '../components/GallerySection.jsx'
 import { ImpactStatsSection } from '../components/ImpactStatsSection.jsx'
 import { HeroTitle } from '../components/HeroTitle.jsx'
 import { Reveal } from '../components/Reveal.jsx'
@@ -143,6 +144,10 @@ export function ClassicLayout() {
           <FacultyMosaicSection />
         </Reveal>
 
+        <Reveal delay={0.055}>
+          <GallerySection />
+        </Reveal>
+
         <Reveal delay={0.06}>
         <section className="section" id="schedule" aria-labelledby="schedule-title">
           <div className="section__inner">
@@ -159,7 +164,7 @@ export function ClassicLayout() {
                 </div>
               ))}
             </div>
-            <p className="fineprint">{SCHEDULE.footnote}</p>
+            <p className="schedule__by-class fineprint">{SCHEDULE.byClass}</p>
           </div>
         </section>
         </Reveal>

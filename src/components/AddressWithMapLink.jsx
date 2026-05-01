@@ -49,7 +49,7 @@ export function AddressWithMapLink({ oneLine = false, className = '' }) {
         <div className="address-with-map__frame">
           <iframe
             className="address-with-map__iframe"
-            title="Map showing Murthy Education Academy, Ashok Nagar, Hyderabad"
+            title="Map showing Murthy Educational Academy, Ashok Nagar, Hyderabad"
             src={SITE.googleMapsEmbedUrl}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

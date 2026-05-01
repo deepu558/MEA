@@ -25,6 +25,7 @@ export function StaffPopCard({ member, variant = 'default' }) {
             height={400}
             loading="lazy"
             decoding="async"
+            role="presentation"
           />
         </div>
       </div>

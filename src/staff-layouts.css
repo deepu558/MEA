@@ -238,10 +238,10 @@
 }
 .stf-mosaic-sec p.stf-mosaic-sec__intro {
   margin: 0 0 1.4rem;
-  max-width: 32rem;
+  max-width: min(52rem, 100%);
   color: var(--ink-muted);
-  line-height: 1.5;
-  font-size: 0.98rem;
+  line-height: 1.58;
+  font-size: 1.02rem;
 }
 .stf-mosaic__grid {
   display: grid;
@@ -262,6 +262,52 @@
   max-width: 100%;
   width: 100%;
 }
+
+/* Pair layout: founder (feature) card — wider slab + full-width text column */
+.stf-mosaic__grid--pair .stf-card--feature {
+  max-width: 100%;
+}
+.stf-mosaic__grid--pair .stf-card--feature .stf-card__slab {
+  padding: 1.15rem 8rem 1.2rem 1.15rem;
+  min-height: 8.25rem;
+}
+.stf-mosaic__grid--pair .stf-card--feature .stf-card__text {
+  max-width: none;
+}
+.stf-mosaic__grid--pair .stf-card--feature .stf-card__subj {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  max-width: 36ch;
+}
+.stf-mosaic__grid--pair .stf-card--feature .stf-card__exp {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  max-width: 38ch;
+}
+.stf-mosaic__grid--pair .stf-card--feature .stf-card__portrait {
+  width: 6.65rem;
+  height: 9.5rem;
+  right: 0;
+}
+
+@media (min-width: 480px) {
+  .stf-mosaic__grid--pair .stf-card--feature .stf-card__slab {
+    padding: 1.2rem 9rem 1.25rem 1.2rem;
+    min-height: 8.85rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .stf-mosaic__grid--pair .stf-card--feature .stf-card__slab {
+    padding-right: 10.25rem;
+    min-height: 9.25rem;
+  }
+  .stf-mosaic__grid--pair .stf-card--feature .stf-card__portrait {
+    width: 7.5rem;
+    height: 10.5rem;
+  }
+}
+
 @media (min-width: 900px) {
   .stf-mosaic__grid {
     grid-template-columns: 1.08fr 0.92fr;
@@ -303,6 +349,29 @@
   }
   .stf-mosaic__grid--pair .stf-mosaic__item {
     max-width: 24rem;
+  }
+  .stf-mosaic__grid--pair .stf-mosaic__item--main {
+    max-width: 32rem;
+  }
+
+  .stf-mosaic__grid--pair .stf-card--feature .stf-card__slab {
+    padding: 1.35rem 11.75rem 1.4rem 1.35rem;
+    min-height: 10.25rem;
+  }
+  .stf-mosaic__grid--pair .stf-card--feature .stf-card__name {
+    font-size: 1.28rem;
+  }
+  .stf-mosaic__grid--pair .stf-card--feature .stf-card__subj {
+    font-size: 0.9rem;
+    max-width: 42ch;
+  }
+  .stf-mosaic__grid--pair .stf-card--feature .stf-card__exp {
+    font-size: 0.84rem;
+    max-width: 44ch;
+  }
+  .stf-mosaic__grid--pair .stf-card--feature .stf-card__portrait {
+    width: 8rem;
+    height: 11rem;
   }
 }
 
