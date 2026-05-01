@@ -19,21 +19,32 @@ export function GallerySection() {
             recent years at the centre.
           </p>
         ) : (
-          <ul className="gallery__grid" role="list">
-            {images.map((img) => (
-              <li key={img.src} className="gallery__cell">
-                <div className="gallery__thumb">
-                  <img
-                    className="gallery__img"
-                    src={img.src}
-                    alt={img.alt}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-              </li>
-            ))}
-          </ul>
+          <>
+            <div className="gallery__scroller">
+              <ul
+                className="gallery__grid"
+                role="list"
+                aria-label="Batch photos — swipe sideways on small screens to see more"
+              >
+                {images.map((img) => (
+                  <li key={img.src} className="gallery__cell">
+                    <div className="gallery__thumb">
+                      <img
+                        className="gallery__img"
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {images.length > 2 ? (
+              <p className="gallery__hint">Swipe sideways for more photos</p>
+            ) : null}
+          </>
         )}
       </div>
     </section>

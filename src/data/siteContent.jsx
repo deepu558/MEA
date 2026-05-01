@@ -184,10 +184,6 @@ export const GALLERY = {
       alt: 'MEA students group selfie outdoors near the courtyard mural.',
     },
     {
-      src: '/gallery/gallery-03.png',
-      alt: 'Two MEA students smiling in front of a colourful school-themed wall mural.',
-    },
-    {
       src: '/gallery/gallery-04.png',
       alt: 'Classroom group photo — students and faculty arranged in rows at desks.',
     },
